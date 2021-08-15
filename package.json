@@ -1,0 +1,26 @@
+{
+  "name": "minecraft-studio",
+  "version": "0.0.0",
+  "description": "",
+  "main": "server/dist/index.js",
+  "scripts": {
+    "watch": "tsc -w && tsc-alias -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minecraft-studio/ide.git"
+  },
+  "author": "vanjmali",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/minecraft-studio/ide/issues"
+  },
+  "homepage": "https://github.com/minecraft-studio/ide#readme",
+  "devDependencies": {
+    "tsc-alias": "^1.3.8",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "ws": "^8.1.0"
+  }
+}
