@@ -13,9 +13,8 @@ public class BootMOTD : Label
 	public override void _Ready()
 	{
 		var lang = new File();
-		lang.Open("res://assets/lang/en-us.json", File.ModeFlags.Read);
-		var langStrings = JsonConvert.DeserializeObject<LanguageStrings>(lang.GetAsText());
-		var messages = langStrings.motd;
+		lang.Open("res://assets/lang/motd.txt", File.ModeFlags.Read);
+		var messages = new List<string>(lang.GetAsText().Split("\n"));
 		var randomizer = new Random();
 		Text = messages[randomizer.Next(messages.Count)];
 		lang.Close();
